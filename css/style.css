@@ -1,0 +1,262 @@
+body {
+    font-family:' Albert Sans', sans-serif;
+}
+
+.column {
+  -ms-flex: 100%;
+  flex: 100%;
+  max-width: 100%;
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+
+li {
+float: left;
+border-right:1px solid #bbb;
+}
+
+li:last-child {
+border-right: none;
+}
+
+li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+li a:hover:not(.active){
+background-color: #111;
+}
+
+.active {
+background-color:#C66464;
+
+}
+
+.split{
+    display: flex;
+    flex-direction: column;
+}
+.split p{
+  font-size: 24px;
+  text-align: justify;
+}
+.left{
+  padding: 50px;
+
+}
+
+.right{
+  padding: 50px;
+}
+
+.right p{
+  font-size: 20px;
+}
+
+.left p{
+  font-size: 20px;
+}
+
+.right >img{
+width:100%;
+height: auto;
+}
+
+.img-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+}
+
+.home-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fav-cards{
+  padding: 50px;
+
+}
+
+.favs{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 90%;
+  border-radius: 5px;
+  margin: 20px;
+
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card>img {
+  border-radius: 5px 5px 0 0;
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card>a {
+  padding-bottom: 20px;
+}
+
+.container {
+  padding: 10px 16px;
+}
+
+.card:hover {
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.back{
+background-image: url("../images/corn.png");
+width:100%;
+height: 500px;
+background-repeat: no-repeat;
+}
+
+@media (prefers-reduced-motion) {
+  /* styles to apply if the user's settings are set to reduced motion */
+  .card:hover {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+footer{
+  background-color: black;
+  color: white;
+  width: 100vw;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.footer{
+  display:flex;
+  flex-direction: column;
+}
+
+footer>i{
+  color: white;
+  font-size: 48px;
+}
+
+footer>a>i{
+color: white;
+}
+
+.bottomnav {
+  overflow: hidden;
+}
+
+.bottomnav a {
+  float: center;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  text-decoration: underline;
+}
+
+aside {
+  width: 30%;
+  padding-left: 50px;
+  font-style: italic;
+  background-color: lightgray;
+}
+
+@media screen and (min-width: 800px){
+
+.split{
+    flex-direction: row;
+}
+
+.left{
+  width: 50%;
+}
+
+.right{
+  width: 50%;
+}
+
+.fav-cards{
+  padding: 50px;
+
+}
+
+.favs{
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+
+}
+
+.card {
+  margin: 0px;
+}
+
+
+.card a {
+  padding-bottom: 20px;
+}
+
+.bottomnav {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 45%; /* IE10 */
+  flex: 100%;
+  max-width: 40%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+}
+
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */

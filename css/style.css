@@ -175,6 +175,8 @@ color: white;
 
 .bottomnav {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .bottomnav a {
@@ -231,7 +233,7 @@ aside {
 .bottomnav {
   overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 
 }
 
